@@ -1,8 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display } from 'next/font/google'
-import { SmoothScroll } from '@/components/ui/SmoothScroll'
-import { CustomCursor } from '@/components/ui/CustomCursor'
-import { GrainOverlay } from '@/components/ui/GrainOverlay'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -18,7 +15,7 @@ const playfair = Playfair_Display({
 })
 
 export const viewport: Viewport = {
-  themeColor: '#050505',
+  themeColor: '#000000',
   width: 'device-width',
   initialScale: 1,
 }
@@ -52,12 +49,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="min-h-screen bg-[var(--color-bg)] text-white font-sans antialiased overflow-x-hidden">
-        <SmoothScroll>
-          <CustomCursor />
-          <GrainOverlay />
-          {children}
-        </SmoothScroll>
+      <body className="min-h-screen bg-black text-white font-sans antialiased overflow-x-hidden">
+        {children}
       </body>
     </html>
   )

@@ -17,12 +17,12 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-[var(--color-bg)]/95 backdrop-blur-xl border-b border-[var(--color-border)]'
+          ? 'bg-black/90 backdrop-blur-xl border-b border-[#D4AF37]/15'
           : 'bg-transparent'
       }`}
     >
@@ -34,38 +34,41 @@ export default function Navbar() {
             </span>
           </Link>
 
+          {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-10">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors duration-300 group"
+                className="relative text-sm text-[#b3b3b3] hover:text-white transition-colors duration-300 group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[var(--color-brand)] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
               </Link>
             ))}
           </div>
 
+          {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-4">
             <a
               href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-5 py-2.5 text-sm font-medium text-[var(--color-brand)] border border-[var(--color-brand)]/30 rounded-full hover:bg-[var(--color-brand)]/10 transition-all duration-300"
+              className="px-5 py-2.5 text-sm font-medium text-[#D4AF37] border border-[#D4AF37]/30 rounded-full hover:bg-[#D4AF37]/10 transition-all duration-300"
               data-hover
             >
               WhatsApp
             </a>
             <Link
               href="/booking"
-              className="px-5 py-2.5 text-sm font-semibold text-black bg-gradient-to-r from-[var(--color-brand-dark)] to-[var(--color-brand)] rounded-full hover:shadow-lg hover:shadow-[var(--color-brand)]/25 transition-all duration-300"
+              className="px-5 py-2.5 text-sm font-semibold text-black bg-gradient-to-r from-[#B8960C] to-[#D4AF37] rounded-full hover:shadow-lg hover:shadow-[#D4AF37]/25 transition-all duration-300"
               data-hover
             >
               Book Now
             </Link>
           </div>
 
+          {/* Mobile hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-1.5"
@@ -74,20 +77,21 @@ export default function Navbar() {
           >
             <motion.span
               animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 }}
-              className="block w-6 h-0.5 bg-[var(--color-brand)] origin-center"
+              className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
             />
             <motion.span
               animate={{ opacity: isOpen ? 0 : 1 }}
-              className="block w-6 h-0.5 bg-[var(--color-brand)]"
+              className="block w-6 h-0.5 bg-[#D4AF37]"
             />
             <motion.span
               animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -6 : 0 }}
-              className="block w-6 h-0.5 bg-[var(--color-brand)] origin-center"
+              className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
             />
           </button>
         </div>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -95,7 +99,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden overflow-hidden bg-[var(--color-surface)]/98 backdrop-blur-xl border-t border-[var(--color-border)]"
+            className="lg:hidden overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl border-t border-[#D4AF37]/15"
           >
             <div className="px-6 py-8 space-y-1">
               {NAV_LINKS.map((link, i) => (
@@ -108,7 +112,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 text-lg text-[var(--color-text-secondary)] hover:text-[var(--color-brand)] transition-colors"
+                    className="block py-3 text-lg text-[#b3b3b3] hover:text-[#D4AF37] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -118,12 +122,12 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="pt-4 flex flex-col gap-3"
+                className="pt-4"
               >
                 <Link
                   href="/booking"
                   onClick={() => setIsOpen(false)}
-                  className="block text-center px-6 py-3 bg-gradient-to-r from-[var(--color-brand-dark)] to-[var(--color-brand)] text-black font-semibold rounded-full"
+                  className="block text-center px-6 py-3 bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-semibold rounded-full"
                 >
                   Book Now
                 </Link>

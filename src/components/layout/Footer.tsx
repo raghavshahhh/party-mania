@@ -3,14 +3,15 @@ import { SITE_CONFIG, NAV_LINKS, SERVICE_CATEGORIES } from '@/lib/constants'
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-surface)] border-t border-[var(--color-border)]">
+    <footer className="bg-[#0a0a0a] border-t border-[#D4AF37]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+          {/* Brand */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-bold text-gold-gradient mb-4">
               {SITE_CONFIG.name}
             </h3>
-            <p className="text-sm text-[var(--color-text-tertiary)] leading-relaxed mb-6">
+            <p className="text-sm text-[#737373] leading-relaxed mb-6">
               {SITE_CONFIG.tagline}
               <br />
               Premium decoration services for all your special occasions in {SITE_CONFIG.city}.
@@ -26,6 +27,7 @@ export default function Footer() {
             </a>
           </div>
 
+          {/* Navigation */}
           <div>
             <h4 className="text-xs font-semibold text-white tracking-wider uppercase mb-4">Navigation</h4>
             <div className="space-y-2.5">
@@ -33,7 +35,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors"
+                  className="block text-sm text-[#737373] hover:text-[#D4AF37] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -41,6 +43,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Services */}
           <div>
             <h4 className="text-xs font-semibold text-white tracking-wider uppercase mb-4">Services</h4>
             <div className="space-y-2.5">
@@ -48,7 +51,7 @@ export default function Footer() {
                 <Link
                   key={category.id}
                   href={`/services?category=${category.id}`}
-                  className="block text-sm text-[var(--color-text-tertiary)] hover:text-[var(--color-brand)] transition-colors"
+                  className="block text-sm text-[#737373] hover:text-[#D4AF37] transition-colors"
                 >
                   {category.label}
                 </Link>
@@ -56,13 +59,14 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Contact */}
           <div>
             <h4 className="text-xs font-semibold text-white tracking-wider uppercase mb-4">Contact</h4>
-            <div className="space-y-3 text-sm text-[var(--color-text-tertiary)]">
-              <a href={`tel:${SITE_CONFIG.phone}`} className="block hover:text-[var(--color-brand)] transition-colors">
+            <div className="space-y-3 text-sm text-[#737373]">
+              <a href={`tel:${SITE_CONFIG.phone}`} className="block hover:text-[#D4AF37] transition-colors">
                 {SITE_CONFIG.phone}
               </a>
-              <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-[var(--color-brand)] transition-colors">
+              <a href={`mailto:${SITE_CONFIG.email}`} className="block hover:text-[#D4AF37] transition-colors">
                 {SITE_CONFIG.email}
               </a>
               <p>{SITE_CONFIG.city}</p>
@@ -70,7 +74,7 @@ export default function Footer() {
                 href={SITE_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block hover:text-[var(--color-brand)] transition-colors"
+                className="block hover:text-[#D4AF37] transition-colors"
               >
                 {SITE_CONFIG.instagram}
               </a>
@@ -78,15 +82,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-[var(--color-text-tertiary)]">
+        {/* Bottom bar */}
+        <div className="py-6 border-t border-[#D4AF37]/10 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-[#737373]">
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
-          <p className="text-xs text-[var(--color-text-tertiary)]">
+          <p className="text-xs text-[#737373]">
             Built by{' '}
             <a
               href="https://ragspro.com"
-              className="text-[var(--color-brand)]/50 hover:text-[var(--color-brand)] transition-colors"
+              className="text-[#D4AF37]/50 hover:text-[#D4AF37] transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >

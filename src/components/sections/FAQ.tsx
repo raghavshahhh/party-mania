@@ -7,10 +7,10 @@ import { SectionHeading } from '@/components/ui/SectionHeading'
 import { ChevronDown } from 'lucide-react'
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section className="section-padding bg-[var(--color-surface)]">
+    <section className="section-padding bg-[#0a0a0a]">
       <div className="max-w-3xl mx-auto">
         <SectionHeading
           label="FAQs"
@@ -20,13 +20,9 @@ export default function FAQ() {
 
         <div className="space-y-3">
           {FAQ_ITEMS.map((item, i) => (
-            <motion.div
+            <div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="rounded-xl border border-[var(--color-border)] overflow-hidden bg-[var(--color-surface-card)] hover:border-[var(--color-border-hover)] transition-colors duration-300"
+              className="rounded-xl border border-[#D4AF37]/10 overflow-hidden bg-[#0d0d0d] hover:border-[#D4AF37]/25 transition-colors duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -39,7 +35,7 @@ export default function FAQ() {
                   transition={{ duration: 0.3 }}
                   className="flex-shrink-0"
                 >
-                  <ChevronDown className="w-4 h-4 text-[var(--color-brand)]" />
+                  <ChevronDown className="w-4 h-4 text-[#D4AF37]" />
                 </motion.span>
               </button>
 
@@ -53,14 +49,14 @@ export default function FAQ() {
                     className="overflow-hidden"
                   >
                     <div className="px-5 pb-5 pt-0">
-                      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                      <p className="text-sm text-[#b3b3b3] leading-relaxed">
                         {item.answer}
                       </p>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
