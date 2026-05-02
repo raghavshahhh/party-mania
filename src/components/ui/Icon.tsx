@@ -21,6 +21,12 @@ import {
   Check,
   ChevronDown,
   Quote,
+  Shield,
+  Send,
+  Calendar,
+  User,
+  X,
+  ExternalLink,
   type LucideProps,
 } from 'lucide-react'
 
@@ -45,6 +51,12 @@ const iconMap = {
   Check,
   ChevronDown,
   Quote,
+  Shield,
+  Send,
+  Calendar,
+  User,
+  X,
+  ExternalLink,
 } as const
 
 type IconName = keyof typeof iconMap
