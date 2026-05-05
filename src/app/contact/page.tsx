@@ -15,13 +15,13 @@ export default function ContactPage() {
     setSubmitted(true)
   }
 
-  const inputBase = "w-full px-3 sm:px-4 py-3 bg-[#111] border border-[#1a1a1a] rounded-xl text-xs sm:text-sm text-white placeholder-[#444] focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
+  const inputBase = "w-full px-3 sm:px-4 py-3 bg-black border border-[#1a1a1a] rounded-xl text-xs sm:text-sm text-white placeholder-[#444] focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
 
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Hero */}
       <section className="pt-28 sm:pt-32 pb-8 sm:pb-12 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.1),transparent_60%)]" />
+        {/* Background */}
         <div className="relative max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#D4AF37]/15 bg-[#D4AF37]/[0.04] mb-5 sm:mb-6">
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-emerald-500/15 hover:border-emerald-500/40 transition-all duration-500"
+                  className="group block p-5 sm:p-6 bg-black rounded-2xl border border-emerald-500/15 hover:border-emerald-500/40 transition-all duration-500"
                 >
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
@@ -68,7 +68,7 @@ export default function ContactPage() {
                 {/* Phone */}
                 <a
                   href={`tel:${SITE_CONFIG.phone}`}
-                  className="group block p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
+                  className="group block p-5 sm:p-6 bg-black rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
                 >
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 {/* Email */}
                 <a
                   href={`mailto:${SITE_CONFIG.email}`}
-                  className="group block p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
+                  className="group block p-5 sm:p-6 bg-black rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
                 >
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                   href={SITE_CONFIG.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group block p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
+                  className="group block p-5 sm:p-6 bg-black rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
                 >
                   <div className="flex items-start gap-3 sm:gap-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-500">
@@ -125,7 +125,7 @@ export default function ContactPage() {
 
               <ScrollReveal delay={0.2}>
                 {/* Address & Hours */}
-                <div className="p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+                <div className="p-5 sm:p-6 bg-black rounded-2xl border border-[#D4AF37]/10">
                   <div className="flex items-start gap-3 sm:gap-4 mb-4">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
@@ -149,11 +149,11 @@ export default function ContactPage() {
 
               <ScrollReveal delay={0.25}>
                 {/* Service Areas */}
-                <div className="p-5 sm:p-6 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+                <div className="p-5 sm:p-6 bg-black rounded-2xl border border-[#D4AF37]/10">
                   <h3 className="text-xs sm:text-sm font-semibold text-white mb-3">Areas We Serve</h3>
                   <div className="flex flex-wrap gap-2">
                     {CONTACT_INFO.areas.map((area) => (
-                      <span key={area} className="px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs text-[#999] bg-[#111] border border-[#1a1a1a] rounded-full">
+                      <span key={area} className="px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs text-[#999] bg-black border border-[#1a1a1a] rounded-full">
                         {area}
                       </span>
                     ))}
@@ -165,7 +165,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <ScrollReveal delay={0.1}>
-                <div className="p-6 sm:p-8 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+                <div className="p-6 sm:p-8 bg-black rounded-2xl border border-[#D4AF37]/10">
                   {submitted ? (
                     <motion.div
                       initial={{ opacity: 0, scale: 0.95, filter: 'blur(8px)' }}

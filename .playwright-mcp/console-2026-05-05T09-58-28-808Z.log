@@ -1,0 +1,28 @@
+[    1348ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[    1349ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[    5977ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[    5978ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[  553880ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[  553887ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/gallery:0
+[  572534ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[  572540ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/services?category=haldi:0
+[  664542ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[  664554ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/contact:0
+[  670399ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[  670400ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[  688653ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[  688654ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 1065424ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 1065425ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 1069264ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 1069264ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 1081441ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 1081442ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 1084267ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 1084267ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 1905540ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 1905542ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0
+[ 2456516ms] [WARNING] The resource https://party-mania.vercel.app/_next/static/chunks/14wye~598~8dv.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://party-mania.vercel.app/:0
+[ 2485661ms] [WARNING] The resource https://party-mania.vercel.app/_next/static/chunks/14wye~598~8dv.css was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://party-mania.vercel.app/:0
+[ 2688645ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://party-mania.vercel.app/icon-192.png:0
+[ 2688647ms] [WARNING] Error while trying to use the following icon from the Manifest: https://party-mania.vercel.app/icon-192.png (Download error or resource isn't a valid image) @ https://party-mania.vercel.app/:0

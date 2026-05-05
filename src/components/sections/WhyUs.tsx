@@ -11,8 +11,6 @@ const featureColors = ['#EC4899', '#D4AF37', '#10B981', '#3B82F6', '#F59E0B', '#
 export default function WhyUs() {
   return (
     <section className="section-padding bg-black relative overflow-hidden">
-      {/* Background mesh */}
-      <div className="absolute inset-0 gradient-mesh opacity-50" />
 
       <div className="relative max-w-7xl mx-auto">
         <ScrollReveal className="text-center mb-14">

@@ -80,8 +80,6 @@ export default function Testimonials() {
 
   return (
     <section className="section-padding bg-black relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(212,175,55,0.04),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-8 sm:mb-10">

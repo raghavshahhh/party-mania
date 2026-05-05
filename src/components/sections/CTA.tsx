@@ -10,12 +10,8 @@ import { ArrowRight, Phone, Shield } from 'lucide-react'
 export default function CTA() {
   return (
     <section className="section-padding bg-black relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,175,55,0.08),transparent_60%)]" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/10 to-transparent" />
-      </div>
+      {/* Background */}
+      <div className="absolute inset-0" />
 
       <ScrollReveal blur className="relative z-10 max-w-3xl mx-auto text-center">
         {/* Trust badges */}

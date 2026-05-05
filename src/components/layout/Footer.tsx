@@ -7,7 +7,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal'
 export default function Footer() {
   return (
     <footer className="px-3 sm:px-4 lg:px-8 pb-4 sm:pb-6 pt-8 sm:pt-12">
-      <div className="max-w-7xl mx-auto bg-[#0a0a0a]/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-[#D4AF37]/10 overflow-hidden"
+      <div className="max-w-7xl mx-auto bg-black/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-[#D4AF37]/10 overflow-hidden"
         style={{ WebkitBackdropFilter: 'blur(20px)', backdropFilter: 'blur(20px)' }}
       >
         <div className="px-5 sm:px-8 lg:px-12">

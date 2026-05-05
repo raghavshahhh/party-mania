@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic'
 import Hero from '@/components/sections/Hero'
-import Services from '@/components/sections/Services'
-import WhyUs from '@/components/sections/WhyUs'
-import Process from '@/components/sections/Process'
-import Testimonials from '@/components/sections/Testimonials'
-import FAQ from '@/components/sections/FAQ'
-import CTA from '@/components/sections/CTA'
+
+// Lazy-load below-fold sections for faster initial load
+const Services = dynamic(() => import('@/components/sections/Services'))
+const WhyUs = dynamic(() => import('@/components/sections/WhyUs'))
+const Process = dynamic(() => import('@/components/sections/Process'))
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'))
+const FAQ = dynamic(() => import('@/components/sections/FAQ'))
+const CTA = dynamic(() => import('@/components/sections/CTA'))
 
 export default function Home() {
   return (

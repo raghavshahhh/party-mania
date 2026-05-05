@@ -52,7 +52,7 @@ function BookingForm() {
     if (errors[field]) setErrors(prev => ({ ...prev, [field]: '' }))
   }
 
-  const inputBase = "w-full px-3 sm:px-4 py-3 bg-[#111] border rounded-xl text-xs sm:text-sm text-white placeholder-[#444] focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
+  const inputBase = "w-full px-3 sm:px-4 py-3 bg-black border rounded-xl text-xs sm:text-sm text-white placeholder-[#444] focus:outline-none focus:border-[#D4AF37]/50 transition-colors"
   const inputError = "border-red-500/50"
   const inputNormal = "border-[#1a1a1a]"
 
@@ -63,7 +63,7 @@ function BookingForm() {
           initial={{ opacity: 0, scale: 0.9, filter: 'blur(8px)' }}
           animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-md w-full text-center p-8 sm:p-10 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/20"
+          className="max-w-md w-full text-center p-8 sm:p-10 bg-black rounded-2xl border border-[#D4AF37]/20"
         >
           <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-5 sm:mb-6">
             <Check className="w-7 h-7 sm:w-8 sm:h-8 text-emerald-400" />
@@ -89,7 +89,7 @@ function BookingForm() {
     <main className="min-h-screen bg-black text-white">
       {/* Hero */}
       <section className="pt-28 sm:pt-32 pb-8 sm:pb-12 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.1),transparent_60%)]" />
+        {/* Background */}
         <div className="relative max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#D4AF37]/15 bg-[#D4AF37]/[0.04] mb-5 sm:mb-6">
@@ -112,7 +112,7 @@ function BookingForm() {
           <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
             {/* Personal Info */}
             <ScrollReveal>
-              <div className="p-5 sm:p-7 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+              <div className="p-5 sm:p-7 bg-black rounded-2xl border border-[#D4AF37]/10">
                 <h3 className="text-base sm:text-lg font-semibold text-white mb-5 sm:mb-6 flex items-center gap-2">
                   <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" /> Your Details
                 </h3>
@@ -137,7 +137,7 @@ function BookingForm() {
 
             {/* Event Details */}
             <ScrollReveal delay={0.1}>
-              <div className="p-5 sm:p-7 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+              <div className="p-5 sm:p-7 bg-black rounded-2xl border border-[#D4AF37]/10">
                 <h3 className="text-base sm:text-lg font-semibold text-white mb-5 sm:mb-6 flex items-center gap-2">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" /> Event Details
                 </h3>
@@ -193,7 +193,7 @@ function BookingForm() {
 
             {/* Special Requests */}
             <ScrollReveal delay={0.2}>
-              <div className="p-5 sm:p-7 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+              <div className="p-5 sm:p-7 bg-black rounded-2xl border border-[#D4AF37]/10">
                 <h3 className="text-base sm:text-lg font-semibold text-white mb-5 sm:mb-6 flex items-center gap-2">
                   <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" /> Special Requests
                 </h3>

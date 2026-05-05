@@ -24,8 +24,8 @@ function PricingCard({ pkg, category, isPopular }: { pkg: PricingPackage; catego
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={`relative p-5 sm:p-7 rounded-2xl border transition-all duration-500 ${
         isPopular
-          ? 'bg-[#111] border-[#D4AF37]/40 scale-[1.02] shadow-lg shadow-[#D4AF37]/10'
-          : 'bg-[#0d0d0d] border-[#D4AF37]/10 hover:border-[#D4AF37]/25'
+          ? 'bg-black border-[#D4AF37]/40 scale-[1.02] shadow-lg shadow-[#D4AF37]/10'
+          : 'bg-black border-[#D4AF37]/10 hover:border-[#D4AF37]/25'
       }`}
     >
       {isPopular && (
@@ -88,7 +88,7 @@ function ServicesContent() {
     <main className="min-h-screen bg-black text-white">
       {/* Hero */}
       <section className="pt-28 sm:pt-32 pb-10 sm:pb-16 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.1),transparent_60%)]" />
+        {/* Background */}
         <div className="relative max-w-7xl mx-auto text-center">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#D4AF37]/15 bg-[#D4AF37]/[0.04] mb-5 sm:mb-6">
@@ -140,7 +140,7 @@ function ServicesContent() {
           <div className="max-w-7xl mx-auto">
             {/* Service info */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 mb-10 sm:mb-12">
-              <div className="lg:col-span-1 p-5 sm:p-7 bg-[#0d0d0d] rounded-2xl border border-[#D4AF37]/10">
+              <div className="lg:col-span-1 p-5 sm:p-7 bg-black rounded-2xl border border-[#D4AF37]/10">
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/20 flex items-center justify-center mb-4 sm:mb-5">
                   <Icon name={activeService.icon} className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]" />
                 </div>
@@ -173,7 +173,7 @@ function ServicesContent() {
 
             {/* CTA */}
             <ScrollReveal>
-              <div className="text-center p-8 sm:p-10 bg-[#0a0a0a] rounded-2xl border border-[#D4AF37]/10">
+              <div className="text-center p-8 sm:p-10 bg-black rounded-2xl border border-[#D4AF37]/10">
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Need a Custom Package?</h3>
                 <p className="text-xs sm:text-sm text-[#999] mb-6 max-w-md mx-auto">
                   Every event is unique. Tell us your vision and budget — we&apos;ll create a custom decoration plan just for you.

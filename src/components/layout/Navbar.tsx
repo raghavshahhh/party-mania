@@ -118,7 +118,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="mx-3 sm:mx-5 mt-[84px] bg-[#0d0d0d]/95 backdrop-blur-2xl rounded-2xl border border-[#D4AF37]/15 overflow-hidden"
+              className="mx-3 sm:mx-5 mt-[84px] bg-black/95 backdrop-blur-2xl rounded-2xl border border-[#D4AF37]/15 overflow-hidden"
               style={{ WebkitBackdropFilter: 'blur(24px)', backdropFilter: 'blur(24px)' }}
               onClick={(e) => e.stopPropagation()}
             >

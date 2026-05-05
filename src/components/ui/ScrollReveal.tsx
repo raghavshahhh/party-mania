@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useSimpleMotion } from '@/hooks/useReducedMotion'
 
 interface ScrollRevealProps {
   children: React.ReactNode
@@ -17,6 +18,8 @@ export function ScrollReveal({
   blur = true,
   direction = 'up',
 }: ScrollRevealProps) {
+  const simple = useSimpleMotion()
+
   const directionOffset = {
     up: { y: 40, x: 0 },
     down: { y: -40, x: 0 },
@@ -26,13 +29,20 @@ export function ScrollReveal({
 
   const offset = directionOffset[direction]
 
+  // Low-end: skip blur filter, reduce transform distance, faster duration
+  const yOffset = simple ? 15 : offset.y
+  const xOffset = simple ? offset.x * 0.4 : offset.x
+  const shouldBlur = blur && !simple
+  const duration = simple ? 0.4 : 0.8
+
   return (
     <motion.div
       initial={{
         opacity: 0,
-        ...offset,
-        filter: blur ? 'blur(8px)' : 'blur(0px)',
-        scale: 0.98,
+        y: yOffset,
+        x: xOffset,
+        filter: shouldBlur ? 'blur(8px)' : 'blur(0px)',
+        scale: simple ? 1 : 0.98,
       }}
       whileInView={{
         opacity: 1,
@@ -43,13 +53,13 @@ export function ScrollReveal({
       }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{
-        duration: 0.8,
-        delay,
+        duration,
+        delay: simple ? 0 : delay,
         ease: [0.16, 1, 0.3, 1],
-        filter: { duration: 0.6, delay: delay + 0.1 },
+        ...(shouldBlur ? { filter: { duration: 0.6, delay: delay + 0.1 } } : {}),
       }}
       className={className}
-      style={{ willChange: 'opacity, transform, filter' }}
+      style={{ willChange: simple ? 'opacity' : 'opacity, transform, filter' }}
     >
       {children}
     </motion.div>

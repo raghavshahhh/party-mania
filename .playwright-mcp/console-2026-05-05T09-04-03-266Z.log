@@ -1,0 +1,7 @@
+[     -23ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.whatsapp.com/resolve/?deeplink=%2F91XXXXXXXXXX&not_found=1:0
+[     448ms] [ERROR] Loading the image 'https://lookaside.fbsbx.com/elementpath/media/?media_id=661904412004367&version=1774548498' violates the following Content Security Policy directive: "img-src https://*.fbcdn.net https://*.whatsapp.net 'self' data: blob:". The action has been blocked. @ https://api.whatsapp.com/resolve/?deeplink=%2F91XXXXXXXXXX&not_found=1:13
+[     449ms] [ERROR] Loading the image 'https://lookaside.fbsbx.com/elementpath/media/?media_id=656888636144949&version=1774548498' violates the following Content Security Policy directive: "img-src https://*.fbcdn.net https://*.whatsapp.net 'self' data: blob:". The action has been blocked. @ https://api.whatsapp.com/resolve/?deeplink=%2F91XXXXXXXXXX&not_found=1:13
+[    1044ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.whatsapp.com/data/manifest.json:0
+[    1045ms] [ERROR] Manifest fetch from https://api.whatsapp.com/data/manifest.json failed, code 404 @ https://api.whatsapp.com/resolve/?deeplink=%2F91XXXXXXXXXX&not_found=1:0
+[    2328ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://api.whatsapp.com/data/manifest.json:0
+[    2331ms] [ERROR] Manifest fetch from https://api.whatsapp.com/data/manifest.json failed, code 404 @ https://api.whatsapp.com/resolve/?deeplink=%2F91XXXXXXXXXX&not_found=1:0

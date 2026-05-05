@@ -22,7 +22,7 @@ export default function GalleryPage() {
     <main className="min-h-screen bg-black text-white">
       {/* Hero */}
       <section className="pt-28 sm:pt-32 pb-10 sm:pb-16 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(212,175,55,0.1),transparent_60%)]" />
+        {/* Background */}
         <div className="relative max-w-7xl mx-auto text-center">
           <ScrollReveal>
             <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full border border-[#D4AF37]/15 bg-[#D4AF37]/[0.04] mb-5 sm:mb-6">
@@ -81,7 +81,7 @@ export default function GalleryPage() {
                       className="group relative cursor-pointer rounded-2xl overflow-hidden border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all duration-500"
                     >
                       {/* Image */}
-                      <div className="aspect-[4/3] relative overflow-hidden bg-[#0d0d0d]">
+                      <div className="aspect-[4/3] relative overflow-hidden bg-black">
                         <Image
                           src={`/images/gallery/${item.id}.jpg`}
                           alt={item.title}
@@ -97,7 +97,7 @@ export default function GalleryPage() {
                       </div>
 
                       {/* Info */}
-                      <div className="p-4 sm:p-5 bg-[#0d0d0d]">
+                      <div className="p-4 sm:p-5 bg-black">
                         <div className="flex items-center gap-2 mb-2">
                           {catInfo && (
                             <span className="px-2 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-[10px] font-medium text-[#D4AF37] bg-[#D4AF37]/10 rounded-full">
@@ -119,7 +119,7 @@ export default function GalleryPage() {
 
           {/* CTA */}
           <ScrollReveal delay={0.3} className="text-center mt-12 sm:mt-16">
-            <div className="p-8 sm:p-10 bg-[#0a0a0a] rounded-2xl border border-[#D4AF37]/10">
+            <div className="p-8 sm:p-10 bg-black rounded-2xl border border-[#D4AF37]/10">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-3">Want Something Like This?</h3>
               <p className="text-xs sm:text-sm text-[#999] mb-6 max-w-md mx-auto">
                 Every decoration is customized to your preferences. Book now and let us create your dream setup.
@@ -153,7 +153,7 @@ export default function GalleryPage() {
               className="w-full max-w-lg bg-[#111] rounded-2xl border border-[#D4AF37]/20 overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-video relative bg-[#0d0d0d]">
+              <div className="aspect-video relative bg-black">
                 <Image
                   src={`/images/gallery/${selectedGallery.id}.jpg`}
                   alt={selectedGallery.title}

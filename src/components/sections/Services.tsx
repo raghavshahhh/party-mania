@@ -9,7 +9,7 @@ import { ArrowRight, BadgeIndianRupee } from 'lucide-react'
 
 export default function Services() {
   return (
-    <section className="section-padding bg-[#0a0a0a] relative overflow-hidden">
+    <section className="section-padding bg-black relative overflow-hidden">
       {/* Background accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/20 to-transparent" />
 

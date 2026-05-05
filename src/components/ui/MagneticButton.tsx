@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useSimpleMotion } from '@/hooks/useReducedMotion'
 
 interface MagneticButtonProps {
   children: React.ReactNode
@@ -13,6 +14,23 @@ interface MagneticButtonProps {
 export function MagneticButton({ children, className = '', onClick, strength = 0.3 }: MagneticButtonProps) {
   const ref = useRef<HTMLButtonElement>(null)
   const [position, setPosition] = useState({ x: 0, y: 0 })
+  const simple = useSimpleMotion()
+
+  // Low-end: disable magnetic effect entirely, just render a normal button
+  if (simple) {
+    return (
+      <button
+        ref={ref}
+        onClick={onClick}
+        className={className}
+        data-hover
+      >
+        <span className="inline-flex items-center gap-2">
+          {children}
+        </span>
+      </button>
+    )
+  }
 
   const handleMouse = (e: React.MouseEvent<HTMLButtonElement>) => {
     const { clientX, clientY } = e

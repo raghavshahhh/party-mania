@@ -1,0 +1,628 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Party Mania" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: Party Mania
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "Services" [ref=e9] [cursor=pointer]:
+          - /url: /services
+          - text: Services
+        - link "Gallery" [ref=e10] [cursor=pointer]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Book Now" [ref=e11] [cursor=pointer]:
+          - /url: /booking
+          - text: Book Now
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact
+      - generic [ref=e13]:
+        - link "WhatsApp" [ref=e14] [cursor=pointer]:
+          - /url: https://wa.me/91XXXXXXXXXX
+        - link "Book Now" [ref=e15] [cursor=pointer]:
+          - /url: /booking
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - img [ref=e33]
+              - generic [ref=e36]: "#1 Decoration Service in Delhi NCR"
+            - heading "We Decorate, You Celebrate!" [level=1] [ref=e37]:
+              - generic [ref=e40]: We
+              - generic [ref=e43]: Decorate,
+              - generic [ref=e46]: You
+              - generic [ref=e49]: Celebrate!
+            - paragraph [ref=e50]: Premium balloon decorations, themed setups & custom event styling for birthdays, anniversaries, baby showers & more across Delhi NCR
+            - generic [ref=e51]:
+              - link "Book Your Event" [ref=e52] [cursor=pointer]:
+                - /url: /booking
+                - button "Book Your Event" [ref=e53]:
+                  - generic [ref=e54]:
+                    - text: Book Your Event
+                    - img [ref=e55]
+              - link "💬 WhatsApp Us" [ref=e57] [cursor=pointer]:
+                - /url: https://wa.me/91XXXXXXXXXX
+                - button "💬 WhatsApp Us" [ref=e58]:
+                  - generic [ref=e59]: 💬 WhatsApp Us
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - generic [ref=e63]: 0+
+                - generic [ref=e64]: Events Decorated
+              - generic [ref=e65]:
+                - generic [ref=e67]: 0.0★
+                - generic [ref=e68]: Client Rating
+              - generic [ref=e69]:
+                - generic [ref=e71]: 0%
+                - generic [ref=e72]: On-Time Delivery
+              - generic [ref=e73]:
+                - generic [ref=e75]: 0+
+                - generic [ref=e76]: Unique Themes
+          - generic [ref=e78]:
+            - img "Premium birthday decoration by Party Mania" [ref=e79]
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: Starting from ₹2,999
+              - paragraph [ref=e83]: 8+ decoration categories available
+        - generic [ref=e85]:
+          - link "Birthday Decoration" [ref=e86] [cursor=pointer]:
+            - /url: /services?category=birthday
+          - link "Anniversary Decoration" [ref=e87] [cursor=pointer]:
+            - /url: /services?category=anniversary
+          - link "Baby Shower" [ref=e88] [cursor=pointer]:
+            - /url: /services?category=baby-shower
+          - link "Engagement Decoration" [ref=e89] [cursor=pointer]:
+            - /url: /services?category=engagement
+          - link "Haldi Ceremony" [ref=e90] [cursor=pointer]:
+            - /url: /services?category=haldi
+          - link "Mehendi Setup" [ref=e91] [cursor=pointer]:
+            - /url: /services?category=mehendi
+      - generic [ref=e93]: Scroll
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - generic [ref=e101]: What We Offer
+        - heading "Our Decoration Services" [level=2] [ref=e102]
+        - paragraph [ref=e103]: From intimate birthday celebrations to grand functions — we make every event unforgettable.
+      - generic [ref=e104]:
+        - link "2,999+ Birthday Decoration Stunning balloon arches, themed backdrops & photo zones View Details" [ref=e106] [cursor=pointer]:
+          - /url: /services?category=birthday
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - img [ref=e112]
+              - generic [ref=e115]:
+                - img [ref=e116]
+                - generic [ref=e119]: 2,999+
+            - heading "Birthday Decoration" [level=3] [ref=e120]
+            - paragraph [ref=e121]: Stunning balloon arches, themed backdrops & photo zones
+            - generic [ref=e123]:
+              - generic [ref=e124]: View Details
+              - img [ref=e125]
+        - link "3,999+ Anniversary Decoration Romantic setups with florals, lights & personalized touches View Details" [ref=e128] [cursor=pointer]:
+          - /url: /services?category=anniversary
+          - generic [ref=e131]:
+            - generic [ref=e132]:
+              - img [ref=e134]
+              - generic [ref=e136]:
+                - img [ref=e137]
+                - generic [ref=e140]: 3,999+
+            - heading "Anniversary Decoration" [level=3] [ref=e141]
+            - paragraph [ref=e142]: Romantic setups with florals, lights & personalized touches
+            - generic [ref=e144]:
+              - generic [ref=e145]: View Details
+              - img [ref=e146]
+        - link "4,999+ Baby Shower Adorable pastel themes with custom props & balloon garlands View Details" [ref=e149] [cursor=pointer]:
+          - /url: /services?category=baby-shower
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - img [ref=e155]
+              - generic [ref=e158]:
+                - img [ref=e159]
+                - generic [ref=e162]: 4,999+
+            - heading "Baby Shower" [level=3] [ref=e163]
+            - paragraph [ref=e164]: Adorable pastel themes with custom props & balloon garlands
+            - generic [ref=e166]:
+              - generic [ref=e167]: View Details
+              - img [ref=e168]
+        - link "7,999+ Engagement Decoration Elegant ring ceremony setups with premium floral arrangements View Details" [ref=e171] [cursor=pointer]:
+          - /url: /services?category=engagement
+          - generic [ref=e174]:
+            - generic [ref=e175]:
+              - img [ref=e177]
+              - generic [ref=e180]:
+                - img [ref=e181]
+                - generic [ref=e184]: 7,999+
+            - heading "Engagement Decoration" [level=3] [ref=e185]
+            - paragraph [ref=e186]: Elegant ring ceremony setups with premium floral arrangements
+            - generic [ref=e188]:
+              - generic [ref=e189]: View Details
+              - img [ref=e190]
+        - link "4,999+ Haldi Ceremony Vibrant marigold decor with traditional Indian elements View Details" [ref=e193] [cursor=pointer]:
+          - /url: /services?category=haldi
+          - generic [ref=e196]:
+            - generic [ref=e197]:
+              - img [ref=e199]
+              - generic [ref=e204]:
+                - img [ref=e205]
+                - generic [ref=e208]: 4,999+
+            - heading "Haldi Ceremony" [level=3] [ref=e209]
+            - paragraph [ref=e210]: Vibrant marigold decor with traditional Indian elements
+            - generic [ref=e212]:
+              - generic [ref=e213]: View Details
+              - img [ref=e214]
+        - link "5,999+ Mehendi Setup Colorful bohemian setups with cushions & hanging elements View Details" [ref=e217] [cursor=pointer]:
+          - /url: /services?category=mehendi
+          - generic [ref=e220]:
+            - generic [ref=e221]:
+              - img [ref=e223]
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - generic [ref=e233]: 5,999+
+            - heading "Mehendi Setup" [level=3] [ref=e234]
+            - paragraph [ref=e235]: Colorful bohemian setups with cushions & hanging elements
+            - generic [ref=e237]:
+              - generic [ref=e238]: View Details
+              - img [ref=e239]
+        - link "9,999+ Corporate Events Professional event branding, stage decor & welcome setups View Details" [ref=e242] [cursor=pointer]:
+          - /url: /services?category=corporate
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - img [ref=e248]
+              - generic [ref=e252]:
+                - img [ref=e253]
+                - generic [ref=e256]: 9,999+
+            - heading "Corporate Events" [level=3] [ref=e257]
+            - paragraph [ref=e258]: Professional event branding, stage decor & welcome setups
+            - generic [ref=e260]:
+              - generic [ref=e261]: View Details
+              - img [ref=e262]
+        - link "1,999+ Custom Decoration Tell us your vision — we'll bring it to life View Details" [ref=e265] [cursor=pointer]:
+          - /url: /services?category=custom
+          - generic [ref=e268]:
+            - generic [ref=e269]:
+              - img [ref=e271]
+              - generic [ref=e274]:
+                - img [ref=e275]
+                - generic [ref=e278]: 1,999+
+            - heading "Custom Decoration" [level=3] [ref=e279]
+            - paragraph [ref=e280]: Tell us your vision — we'll bring it to life
+            - generic [ref=e282]:
+              - generic [ref=e283]: View Details
+              - img [ref=e284]
+      - link "View All Services & Pricing" [ref=e287] [cursor=pointer]:
+        - /url: /services
+        - text: View All Services & Pricing
+        - img [ref=e288]
+    - generic [ref=e292]:
+      - generic [ref=e293]:
+        - generic [ref=e295]: Why Choose Us
+        - heading "The Party Mania Difference" [level=2] [ref=e296]
+        - paragraph [ref=e297]: We don't just decorate spaces — we create experiences your guests will remember forever.
+      - generic [ref=e298]:
+        - generic [ref=e299]:
+          - generic [ref=e301]: "01"
+          - img [ref=e303]
+          - heading "Custom Themes" [level=3] [ref=e309]
+          - paragraph [ref=e310]: Every decoration tailored uniquely to your vision, theme, and budget
+          - generic [ref=e311]:
+            - img [ref=e312]
+            - generic [ref=e314]: Included
+        - generic [ref=e315]:
+          - generic [ref=e317]: "02"
+          - img [ref=e319]
+          - heading "On-Time Setup" [level=3] [ref=e322]
+          - paragraph [ref=e323]: We arrive early and set up perfectly — punctuality is our promise
+          - generic [ref=e324]:
+            - img [ref=e325]
+            - generic [ref=e327]: Included
+        - generic [ref=e328]:
+          - generic [ref=e330]: "03"
+          - img [ref=e332]
+          - heading "Best Prices" [level=3] [ref=e335]
+          - paragraph [ref=e336]: Premium quality decorations at the most competitive prices in Delhi NCR
+          - generic [ref=e337]:
+            - img [ref=e338]
+            - generic [ref=e340]: Included
+        - generic [ref=e341]:
+          - generic [ref=e343]: "04"
+          - img [ref=e345]
+          - heading "Insta-Worthy" [level=3] [ref=e348]
+          - paragraph [ref=e349]: Setups designed to look stunning in photos, reels & live streams
+          - generic [ref=e350]:
+            - img [ref=e351]
+            - generic [ref=e353]: Included
+        - generic [ref=e354]:
+          - generic [ref=e356]: "05"
+          - img [ref=e358]
+          - heading "Cleanup Included" [level=3] [ref=e361]
+          - paragraph [ref=e362]: Full service from setup to teardown — you enjoy, we handle the rest
+          - generic [ref=e363]:
+            - img [ref=e364]
+            - generic [ref=e366]: Included
+        - generic [ref=e367]:
+          - generic [ref=e369]: "06"
+          - img [ref=e371]
+          - heading "24/7 WhatsApp Support" [level=3] [ref=e373]
+          - paragraph [ref=e374]: Instant responses for queries, changes & last-minute requests
+          - generic [ref=e375]:
+            - img [ref=e376]
+            - generic [ref=e378]: Included
+    - generic [ref=e380]:
+      - generic [ref=e381]:
+        - generic [ref=e382]: How It Works
+        - heading "4 Simple Steps to Your Dream Event" [level=2] [ref=e383]
+        - paragraph [ref=e384]: From your first message to the final celebration — here's how we make magic happen.
+      - generic [ref=e387]:
+        - generic [ref=e388]:
+          - generic [ref=e391]: "01"
+          - generic [ref=e392]:
+            - heading "Share Your Vision" [level=3] [ref=e393]
+            - paragraph [ref=e394]: Tell us about your event, date, venue & theme preference via WhatsApp or our booking form
+        - generic [ref=e395]:
+          - generic [ref=e398]: "02"
+          - generic [ref=e399]:
+            - heading "Get a Custom Quote" [level=3] [ref=e400]
+            - paragraph [ref=e401]: We design a personalized decoration plan with transparent pricing — no hidden costs
+        - generic [ref=e402]:
+          - generic [ref=e405]: "03"
+          - generic [ref=e406]:
+            - heading "Confirm with 50% Advance" [level=3] [ref=e407]
+            - paragraph [ref=e408]: Lock your date with a simple UPI/bank transfer. Rest is paid on the day of event
+        - generic [ref=e409]:
+          - generic [ref=e412]: "04"
+          - generic [ref=e413]:
+            - heading "We Decorate, You Celebrate" [level=3] [ref=e414]
+            - paragraph [ref=e415]: Our team arrives, sets up everything perfectly, and you enjoy your unforgettable event
+    - generic [ref=e418]:
+      - generic [ref=e419]:
+        - generic [ref=e420]:
+          - generic [ref=e422]: Client Love
+          - heading "What Our Clients Say" [level=2] [ref=e423]
+        - generic [ref=e424]:
+          - button [disabled] [ref=e425]:
+            - img [ref=e426]
+          - button [ref=e428]:
+            - img [ref=e429]
+      - generic [ref=e431]:
+        - generic [ref=e433]:
+          - img [ref=e435]
+          - generic [ref=e438]:
+            - img [ref=e439]
+            - img [ref=e441]
+            - img [ref=e443]
+            - img [ref=e445]
+            - img [ref=e447]
+          - paragraph [ref=e449]: “Party Mania transformed our living room into a fairy-tale setup. The balloon arch and themed backdrop were exactly what my daughter wanted. The team was punctual and very professional!”
+          - generic [ref=e450]:
+            - generic [ref=e452]: P
+            - generic [ref=e453]:
+              - paragraph [ref=e454]: Priya Sharma
+              - generic [ref=e455]:
+                - generic [ref=e456]: Daughter's Birthday
+                - generic [ref=e457]: •
+                - generic [ref=e458]:
+                  - img [ref=e459]
+                  - text: Dwarka, Delhi
+        - generic [ref=e463]:
+          - img [ref=e465]
+          - generic [ref=e468]:
+            - img [ref=e469]
+            - img [ref=e471]
+            - img [ref=e473]
+            - img [ref=e475]
+            - img [ref=e477]
+          - paragraph [ref=e479]: “We wanted something intimate yet grand for our anniversary. The candle arrangement and heart balloon arch made our evening magical. Every guest was impressed!”
+          - generic [ref=e480]:
+            - generic [ref=e482]: R
+            - generic [ref=e483]:
+              - paragraph [ref=e484]: Rahul & Anita Verma
+              - generic [ref=e485]:
+                - generic [ref=e486]: 10th Anniversary
+                - generic [ref=e487]: •
+                - generic [ref=e488]:
+                  - img [ref=e489]
+                  - text: Sector 62, Noida
+        - generic [ref=e493]:
+          - img [ref=e495]
+          - generic [ref=e498]:
+            - img [ref=e499]
+            - img [ref=e501]
+            - img [ref=e503]
+            - img [ref=e505]
+            - img [ref=e507]
+          - paragraph [ref=e509]: “The pastel theme they suggested was perfect. Custom props, dessert table setup, and the photo booth — my guests couldn't stop clicking pictures. Great work!”
+          - generic [ref=e510]:
+            - generic [ref=e512]: M
+            - generic [ref=e513]:
+              - paragraph [ref=e514]: Meera Kapoor
+              - generic [ref=e515]:
+                - generic [ref=e516]: Baby Shower
+                - generic [ref=e517]: •
+                - generic [ref=e518]:
+                  - img [ref=e519]
+                  - text: DLF Phase 3, Gurgaon
+        - generic [ref=e523]:
+          - img [ref=e525]
+          - generic [ref=e528]:
+            - img [ref=e529]
+            - img [ref=e531]
+            - img [ref=e533]
+            - img [ref=e535]
+            - img [ref=e537]
+          - paragraph [ref=e539]: “We hired them for our company's annual party. Stage branding and welcome desk looked professional. Delivery was on time and within budget.”
+          - generic [ref=e540]:
+            - generic [ref=e542]: A
+            - generic [ref=e543]:
+              - paragraph [ref=e544]: Arjun Singh
+              - generic [ref=e545]:
+                - generic [ref=e546]: Office Annual Party
+                - generic [ref=e547]: •
+                - generic [ref=e548]:
+                  - img [ref=e549]
+                  - text: Connaught Place, Delhi
+        - generic [ref=e553]:
+          - img [ref=e555]
+          - generic [ref=e558]:
+            - img [ref=e559]
+            - img [ref=e561]
+            - img [ref=e563]
+            - img [ref=e565]
+            - img [ref=e567]
+          - paragraph [ref=e569]: “Golden and white florals with fairy lights — our ring ceremony looked straight out of a movie. The team even stayed for adjustments. Worth every rupee!”
+          - generic [ref=e570]:
+            - generic [ref=e572]: S
+            - generic [ref=e573]:
+              - paragraph [ref=e574]: Sneha & Vikram Gupta
+              - generic [ref=e575]:
+                - generic [ref=e576]: Engagement Ceremony
+                - generic [ref=e577]: •
+                - generic [ref=e578]:
+                  - img [ref=e579]
+                  - text: Rohini, Delhi
+        - generic [ref=e583]:
+          - img [ref=e585]
+          - generic [ref=e588]:
+            - img [ref=e589]
+            - img [ref=e591]
+            - img [ref=e593]
+            - img [ref=e595]
+            - img [ref=e597]
+          - paragraph [ref=e599]: “The marigold canopy and rangoli design were absolutely stunning. They understood the traditional vibe we wanted and delivered beyond expectations.”
+          - generic [ref=e600]:
+            - generic [ref=e602]: K
+            - generic [ref=e603]:
+              - paragraph [ref=e604]: Kavita Joshi
+              - generic [ref=e605]:
+                - generic [ref=e606]: Haldi Ceremony
+                - generic [ref=e607]: •
+                - generic [ref=e608]:
+                  - img [ref=e609]
+                  - text: Ghaziabad
+        - generic [ref=e613]:
+          - img [ref=e615]
+          - generic [ref=e618]:
+            - img [ref=e619]
+            - img [ref=e621]
+            - img [ref=e623]
+            - img [ref=e625]
+            - img [ref=e627]
+          - paragraph [ref=e629]: “Party Mania transformed our living room into a fairy-tale setup. The balloon arch and themed backdrop were exactly what my daughter wanted. The team was punctual and very professional!”
+          - generic [ref=e630]:
+            - generic [ref=e632]: P
+            - generic [ref=e633]:
+              - paragraph [ref=e634]: Priya Sharma
+              - generic [ref=e635]:
+                - generic [ref=e636]: Daughter's Birthday
+                - generic [ref=e637]: •
+                - generic [ref=e638]:
+                  - img [ref=e639]
+                  - text: Dwarka, Delhi
+        - generic [ref=e643]:
+          - img [ref=e645]
+          - generic [ref=e648]:
+            - img [ref=e649]
+            - img [ref=e651]
+            - img [ref=e653]
+            - img [ref=e655]
+            - img [ref=e657]
+          - paragraph [ref=e659]: “We wanted something intimate yet grand for our anniversary. The candle arrangement and heart balloon arch made our evening magical. Every guest was impressed!”
+          - generic [ref=e660]:
+            - generic [ref=e662]: R
+            - generic [ref=e663]:
+              - paragraph [ref=e664]: Rahul & Anita Verma
+              - generic [ref=e665]:
+                - generic [ref=e666]: 10th Anniversary
+                - generic [ref=e667]: •
+                - generic [ref=e668]:
+                  - img [ref=e669]
+                  - text: Sector 62, Noida
+        - generic [ref=e673]:
+          - img [ref=e675]
+          - generic [ref=e678]:
+            - img [ref=e679]
+            - img [ref=e681]
+            - img [ref=e683]
+            - img [ref=e685]
+            - img [ref=e687]
+          - paragraph [ref=e689]: “The pastel theme they suggested was perfect. Custom props, dessert table setup, and the photo booth — my guests couldn't stop clicking pictures. Great work!”
+          - generic [ref=e690]:
+            - generic [ref=e692]: M
+            - generic [ref=e693]:
+              - paragraph [ref=e694]: Meera Kapoor
+              - generic [ref=e695]:
+                - generic [ref=e696]: Baby Shower
+                - generic [ref=e697]: •
+                - generic [ref=e698]:
+                  - img [ref=e699]
+                  - text: DLF Phase 3, Gurgaon
+        - generic [ref=e703]:
+          - img [ref=e705]
+          - generic [ref=e708]:
+            - img [ref=e709]
+            - img [ref=e711]
+            - img [ref=e713]
+            - img [ref=e715]
+            - img [ref=e717]
+          - paragraph [ref=e719]: “We hired them for our company's annual party. Stage branding and welcome desk looked professional. Delivery was on time and within budget.”
+          - generic [ref=e720]:
+            - generic [ref=e722]: A
+            - generic [ref=e723]:
+              - paragraph [ref=e724]: Arjun Singh
+              - generic [ref=e725]:
+                - generic [ref=e726]: Office Annual Party
+                - generic [ref=e727]: •
+                - generic [ref=e728]:
+                  - img [ref=e729]
+                  - text: Connaught Place, Delhi
+        - generic [ref=e733]:
+          - img [ref=e735]
+          - generic [ref=e738]:
+            - img [ref=e739]
+            - img [ref=e741]
+            - img [ref=e743]
+            - img [ref=e745]
+            - img [ref=e747]
+          - paragraph [ref=e749]: “Golden and white florals with fairy lights — our ring ceremony looked straight out of a movie. The team even stayed for adjustments. Worth every rupee!”
+          - generic [ref=e750]:
+            - generic [ref=e752]: S
+            - generic [ref=e753]:
+              - paragraph [ref=e754]: Sneha & Vikram Gupta
+              - generic [ref=e755]:
+                - generic [ref=e756]: Engagement Ceremony
+                - generic [ref=e757]: •
+                - generic [ref=e758]:
+                  - img [ref=e759]
+                  - text: Rohini, Delhi
+        - generic [ref=e763]:
+          - img [ref=e765]
+          - generic [ref=e768]:
+            - img [ref=e769]
+            - img [ref=e771]
+            - img [ref=e773]
+            - img [ref=e775]
+            - img [ref=e777]
+          - paragraph [ref=e779]: “The marigold canopy and rangoli design were absolutely stunning. They understood the traditional vibe we wanted and delivered beyond expectations.”
+          - generic [ref=e780]:
+            - generic [ref=e782]: K
+            - generic [ref=e783]:
+              - paragraph [ref=e784]: Kavita Joshi
+              - generic [ref=e785]:
+                - generic [ref=e786]: Haldi Ceremony
+                - generic [ref=e787]: •
+                - generic [ref=e788]:
+                  - img [ref=e789]
+                  - text: Ghaziabad
+    - generic [ref=e793]:
+      - generic [ref=e794]:
+        - generic [ref=e795]: FAQs
+        - heading "Frequently Asked Questions" [level=2] [ref=e796]
+        - paragraph [ref=e797]: Everything you need to know about booking your dream decoration with us.
+      - generic [ref=e798]:
+        - generic [ref=e799]:
+          - button "What areas do you serve in Delhi NCR?" [ref=e800]:
+            - generic [ref=e801]: What areas do you serve in Delhi NCR?
+            - img [ref=e803]
+          - paragraph [ref=e806]: We cover all areas in Delhi, Noida, Gurgaon, Ghaziabad, and Faridabad. For locations outside NCR, please contact us for availability.
+        - button "How far in advance should I book?" [ref=e808]:
+          - generic [ref=e809]: How far in advance should I book?
+          - img [ref=e811]
+        - button "What is the payment process?" [ref=e814]:
+          - generic [ref=e815]: What is the payment process?
+          - img [ref=e817]
+        - button "Do you handle cleanup after the event?" [ref=e820]:
+          - generic [ref=e821]: Do you handle cleanup after the event?
+          - img [ref=e823]
+        - button "Can I customize the decoration theme?" [ref=e826]:
+          - generic [ref=e827]: Can I customize the decoration theme?
+          - img [ref=e829]
+        - button "What if I need to cancel or reschedule?" [ref=e832]:
+          - generic [ref=e833]: What if I need to cancel or reschedule?
+          - img [ref=e835]
+    - generic [ref=e842]:
+      - generic [ref=e843]:
+        - generic [ref=e844]:
+          - img [ref=e845]
+          - generic [ref=e847]: 50% Advance Only
+        - generic [ref=e848]:
+          - img [ref=e849]
+          - generic [ref=e851]: 24/7 Support
+      - heading "Ready to Make Your Event Unforgettable?" [level=2] [ref=e852]:
+        - generic [ref=e853]:
+          - generic [ref=e855]: Ready
+          - generic [ref=e857]: to
+          - generic [ref=e859]: Make
+          - generic [ref=e861]: Your
+        - generic [ref=e862]:
+          - generic [ref=e864]: Event
+          - generic [ref=e866]: Unforgettable?
+      - paragraph [ref=e867]: Book your decoration now and let us transform your venue into something magical. Simple booking, transparent pricing, stunning results.
+      - generic [ref=e868]:
+        - link "Book Now" [ref=e869] [cursor=pointer]:
+          - /url: /booking
+          - button "Book Now" [ref=e870]:
+            - generic [ref=e871]:
+              - text: Book Now
+              - img [ref=e872]
+        - link "💬 WhatsApp Us" [ref=e874] [cursor=pointer]:
+          - /url: https://wa.me/91XXXXXXXXXX
+          - button "💬 WhatsApp Us" [ref=e875]:
+            - generic [ref=e876]: 💬 WhatsApp Us
+      - paragraph [ref=e877]: No hidden charges • Free cancellation up to 48 hours • Serving all of Delhi NCR
+  - contentinfo [ref=e878]:
+    - generic [ref=e879]:
+      - generic [ref=e880]:
+        - generic [ref=e881]:
+          - heading "Party Mania" [level=3] [ref=e882]
+          - paragraph [ref=e883]:
+            - text: We Decorate, You Celebrate!
+            - text: Premium decoration services for all your special occasions in Delhi NCR.
+          - link "Chat on WhatsApp" [ref=e884] [cursor=pointer]:
+            - /url: https://wa.me/91XXXXXXXXXX
+            - text: Chat on WhatsApp
+        - generic [ref=e886]:
+          - heading "Navigation" [level=4] [ref=e887]
+          - generic [ref=e888]:
+            - link "Home" [ref=e889] [cursor=pointer]:
+              - /url: /
+            - link "Services" [ref=e890] [cursor=pointer]:
+              - /url: /services
+            - link "Gallery" [ref=e891] [cursor=pointer]:
+              - /url: /gallery
+            - link "Book Now" [ref=e892] [cursor=pointer]:
+              - /url: /booking
+            - link "Contact" [ref=e893] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=e894]:
+          - heading "Services" [level=4] [ref=e895]
+          - generic [ref=e896]:
+            - link "Birthday Decoration" [ref=e897] [cursor=pointer]:
+              - /url: /services?category=birthday
+            - link "Anniversary Decoration" [ref=e898] [cursor=pointer]:
+              - /url: /services?category=anniversary
+            - link "Baby Shower" [ref=e899] [cursor=pointer]:
+              - /url: /services?category=baby-shower
+            - link "Engagement Decoration" [ref=e900] [cursor=pointer]:
+              - /url: /services?category=engagement
+            - link "Haldi Ceremony" [ref=e901] [cursor=pointer]:
+              - /url: /services?category=haldi
+            - link "Mehendi Setup" [ref=e902] [cursor=pointer]:
+              - /url: /services?category=mehendi
+        - generic [ref=e903]:
+          - heading "Contact" [level=4] [ref=e904]
+          - generic [ref=e905]:
+            - link "+91-XXXXXXXXXX" [ref=e906] [cursor=pointer]:
+              - /url: tel:+91-XXXXXXXXXX
+            - link "info@partymania.in" [ref=e907] [cursor=pointer]:
+              - /url: mailto:info@partymania.in
+            - paragraph [ref=e908]: Delhi NCR
+            - link "@partymania.delhi" [ref=e909] [cursor=pointer]:
+              - /url: https://instagram.com/partymania.delhi
+      - generic [ref=e910]:
+        - paragraph [ref=e911]: © 2026 Party Mania. All rights reserved.
+        - paragraph [ref=e912]:
+          - text: Built by
+          - link "RAGSPRO" [ref=e913] [cursor=pointer]:
+            - /url: https://ragspro.com

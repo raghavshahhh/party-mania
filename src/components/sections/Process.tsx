@@ -6,7 +6,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal'
 
 export default function Process() {
   return (
-    <section className="section-padding bg-[#0a0a0a]">
+    <section className="section-padding bg-black">
       <div className="max-w-5xl mx-auto">
         <SectionHeading
           label="How It Works"

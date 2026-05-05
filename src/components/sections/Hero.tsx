@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { MagneticButton } from '@/components/ui/MagneticButton'
 import { Counter } from '@/components/ui/Counter'
 import { STATS, SITE_CONFIG, SERVICE_CATEGORIES } from '@/lib/constants'
+import { useSimpleMotion } from '@/hooks/useReducedMotion'
 import { Sparkles, ArrowRight } from 'lucide-react'
 
 const fadeUp = {
@@ -17,27 +18,35 @@ const fadeUp = {
   }),
 }
 
+const fadeUpSimple = {
+  hidden: { opacity: 0, y: 10 },
+  visible: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3, delay: 0, ease: [0.16, 1, 0.3, 1] as const },
+  }),
+}
+
 export default function Hero() {
+  const simple = useSimpleMotion()
+  const variants = simple ? fadeUpSimple : fadeUp
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0a]">
-      {/* Animated background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,175,55,0.12),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(212,175,55,0.06),transparent_50%)]" />
-        <div className="absolute top-[10%] left-[15%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#D4AF37]/[0.04] rounded-full blur-[80px] sm:blur-[120px] animate-pulse-glow" />
-        <div className="absolute bottom-[15%] right-[10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#D4AF37]/[0.03] rounded-full blur-[100px] sm:blur-[150px]" />
-
-        {/* Grid lines */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: `linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
-        }} />
-      </div>
-
-      {/* Floating particles */}
-      <div className="absolute top-20 left-[10%] w-2 h-2 bg-[#D4AF37]/40 rounded-full animate-float" />
-      <div className="absolute top-32 right-[15%] w-1.5 h-1.5 bg-[#D4AF37]/25 rounded-full animate-float-delayed" />
-      <div className="absolute bottom-40 left-[20%] w-1 h-1 bg-[#D4AF37]/30 rounded-full animate-float" />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+      {/* Background effects — hidden on low-end */}
+      {!simple && (
+        <>
+          <div className="absolute top-[10%] left-[15%] w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#D4AF37]/[0.04] rounded-full blur-[80px] sm:blur-[120px] animate-pulse-glow" />
+          <div className="absolute bottom-[15%] right-[10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#D4AF37]/[0.03] rounded-full blur-[100px] sm:blur-[150px]" />
+          <div className="absolute inset-0 opacity-[0.03]" style={{
+            backgroundImage: `linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)`,
+            backgroundSize: '60px 60px',
+          }} />
+          <div className="absolute top-20 left-[10%] w-2 h-2 bg-[#D4AF37]/40 rounded-full animate-float" />
+          <div className="absolute top-32 right-[15%] w-1.5 h-1.5 bg-[#D4AF37]/25 rounded-full animate-float-delayed" />
+          <div className="absolute bottom-40 left-[20%] w-1 h-1 bg-[#D4AF37]/30 rounded-full animate-float" />
+        </>
+      )}
 
       {/* Decorative corner lines — desktop only */}
       <div className="hidden sm:block absolute top-0 left-0 w-32 h-32 border-t border-l border-[#D4AF37]/10" />
@@ -49,7 +58,7 @@ export default function Hero() {
           <div>
             {/* Badge */}
             <motion.div
-              variants={fadeUp}
+              variants={variants}
               initial="hidden"
               animate="visible"
               custom={0.1}
@@ -65,18 +74,18 @@ export default function Hero() {
             <h1 className="font-bold mb-4 sm:mb-6 leading-[1.1] tracking-tight" style={{ fontSize: 'var(--text-5xl)' }}>
               <motion.span
                 className="block"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: simple ? 10 : 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: simple ? 0.3 : 0.8, delay: simple ? 0 : 0.3, ease: [0.16, 1, 0.3, 1] as const }}
               >
                 <span className="text-white">We </span>
                 <span className="text-gold-gradient">Decorate,</span>
               </motion.span>
               <motion.span
                 className="block mt-1 sm:mt-2"
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: simple ? 10 : 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: simple ? 0.3 : 0.8, delay: simple ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] as const }}
               >
                 <span className="text-white">You </span>
                 <span className="text-gold-gradient">Celebrate!</span>
@@ -85,7 +94,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <motion.p
-              variants={fadeUp}
+              variants={variants}
               initial="hidden"
               animate="visible"
               custom={0.9}
@@ -97,7 +106,7 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div
-              variants={fadeUp}
+              variants={variants}
               initial="hidden"
               animate="visible"
               custom={1.1}
@@ -123,7 +132,7 @@ export default function Hero() {
 
             {/* Stats */}
             <motion.div
-              variants={fadeUp}
+              variants={variants}
               initial="hidden"
               animate="visible"
               custom={1.3}
@@ -149,9 +158,9 @@ export default function Hero() {
 
           {/* Right — Image (desktop only) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: simple ? 1 : 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: simple ? 0.3 : 1, delay: simple ? 0 : 0.5, ease: [0.16, 1, 0.3, 1] as const }}
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-[#D4AF37]/15">
@@ -163,24 +172,21 @@ export default function Hero() {
                 sizes="50vw"
                 priority
               />
-              {/* Gold overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
-
-              {/* Floating badge on image */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
               <div className="absolute bottom-6 left-6 right-6 p-5 bg-black/60 backdrop-blur-md rounded-2xl border border-[#D4AF37]/20">
                 <p className="text-sm font-semibold text-white mb-1">Starting from ₹2,999</p>
                 <p className="text-xs text-[#999]">8+ decoration categories available</p>
               </div>
             </div>
-
-            {/* Decorative glow behind image */}
-            <div className="absolute -inset-4 bg-[#D4AF37]/[0.06] rounded-3xl blur-2xl -z-10" />
+            {!simple && (
+              <div className="absolute -inset-4 bg-[#D4AF37]/[0.06] rounded-3xl blur-2xl -z-10" />
+            )}
           </motion.div>
         </div>
 
         {/* Quick service tags */}
         <motion.div
-          variants={fadeUp}
+          variants={variants}
           initial="hidden"
           animate="visible"
           custom={1.5}
@@ -198,22 +204,24 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator — desktop only */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5 }}
-        className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
-      >
-        <span className="text-[10px] text-[#737373] tracking-[0.2em] uppercase">Scroll</span>
+      {/* Scroll indicator — desktop only, hidden on low-end */}
+      {!simple && (
         <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-          className="w-5 h-8 rounded-full border border-[#D4AF37]/30 flex justify-center pt-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.5 }}
+          className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
         >
-          <div className="w-0.5 h-2 bg-[#D4AF37]/60 rounded-full" />
+          <span className="text-[10px] text-[#737373] tracking-[0.2em] uppercase">Scroll</span>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+            className="w-5 h-8 rounded-full border border-[#D4AF37]/30 flex justify-center pt-2"
+          >
+            <div className="w-0.5 h-2 bg-[#D4AF37]/60 rounded-full" />
+          </motion.div>
         </motion.div>
-      </motion.div>
+      )}
     </section>
   )
 }
