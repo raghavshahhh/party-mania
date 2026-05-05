@@ -59,7 +59,7 @@ const iconMap = {
   ExternalLink,
 } as const
 
-type IconName = keyof typeof iconMap
+export type IconName = keyof typeof iconMap
 
 interface IconProps extends LucideProps {
   name: IconName

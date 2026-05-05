@@ -1,16 +1,29 @@
+import type { IconName } from '@/components/ui/Icon'
+
+export const SERVICE_COLORS: Record<string, { bg: string; border: string; text: string; glow: string }> = {
+  birthday:     { bg: 'rgba(236,72,153,0.08)',  border: 'rgba(236,72,153,0.25)',  text: '#EC4899', glow: 'rgba(236,72,153,0.15)' },
+  anniversary:   { bg: 'rgba(239,68,68,0.08)',   border: 'rgba(239,68,68,0.25)',   text: '#EF4444', glow: 'rgba(239,68,68,0.15)' },
+  'baby-shower': { bg: 'rgba(196,181,253,0.08)', border: 'rgba(196,181,253,0.25)', text: '#C4B5FD', glow: 'rgba(196,181,253,0.15)' },
+  engagement:    { bg: 'rgba(212,175,55,0.08)',   border: 'rgba(212,175,55,0.25)',  text: '#D4AF37', glow: 'rgba(212,175,55,0.15)' },
+  haldi:         { bg: 'rgba(245,158,11,0.08)',   border: 'rgba(245,158,11,0.25)',  text: '#F59E0B', glow: 'rgba(245,158,11,0.15)' },
+  mehendi:       { bg: 'rgba(16,185,129,0.08)',   border: 'rgba(16,185,129,0.25)',  text: '#10B981', glow: 'rgba(16,185,129,0.15)' },
+  corporate:     { bg: 'rgba(59,130,246,0.08)',   border: 'rgba(59,130,246,0.25)',  text: '#3B82F6', glow: 'rgba(59,130,246,0.15)' },
+  custom:        { bg: 'rgba(139,92,246,0.08)',   border: 'rgba(139,92,246,0.25)',  text: '#8B5CF6', glow: 'rgba(139,92,246,0.15)' },
+}
+
 export const SITE_CONFIG = {
   name: "Party Mania",
   tagline: "We Decorate, You Celebrate!",
-  phone: "+91-9876543210",          // TODO: Replace with real number
-  whatsapp: "919876543210",          // TODO: Replace with real WhatsApp number
-  email: "partymania.delhi@gmail.com", // TODO: Replace with real email
-  instagram: "@partymania.delhi",    // TODO: Replace with real Instagram
-  instagramUrl: "https://instagram.com/partymania.delhi", // TODO: Replace with real URL
+  phone: "+91-XXXXXXXXXX", // TODO: Get real number from client
+  whatsapp: "91XXXXXXXXXX", // TODO: Get real WhatsApp from client
+  email: "info@partymania.in", // TODO: Verify with client
+  instagram: "@partymania.delhi", // TODO: Verify with client
+  instagramUrl: "https://instagram.com/partymania.delhi", // TODO: Verify with client
   city: "Delhi NCR",
   currency: "INR",
   baseUrl: "https://partymania.in",
-  address: "Dwarka, New Delhi, India", // TODO: Replace with real address
-  googleMapsUrl: "https://maps.google.com/?q=Dwarka+New+Delhi", // TODO: Replace with real embed
+  address: "Delhi NCR, India", // TODO: Get exact address from client
+  googleMapsUrl: "https://maps.google.com/?q=Delhi+NCR", // TODO: Get real embed from client
 } as const;
 
 export const THEME = {
@@ -40,7 +53,7 @@ export const SERVICE_CATEGORIES = [
     id: "birthday",
     label: "Birthday Decoration",
     description: "Stunning balloon arches, themed backdrops & photo zones",
-    icon: "Cake",
+    icon: "Cake" as IconName,
     startingPrice: 2999,
     image: "/images/birthday.jpg",
     features: ["Balloon Arch", "Themed Backdrop", "Photo Zone", "Table Setup", "LED Lights", "Custom Banner"],
@@ -50,7 +63,7 @@ export const SERVICE_CATEGORIES = [
     id: "anniversary",
     label: "Anniversary Decoration",
     description: "Romantic setups with florals, lights & personalized touches",
-    icon: "Heart",
+    icon: "Heart" as IconName,
     startingPrice: 3999,
     image: "/images/anniversary.jpg",
     features: ["Rose Petal Path", "Candle Arrangement", "Heart Balloon Arch", "LED Fairy Lights", "Custom Name Board", "Photo Wall"],
@@ -60,7 +73,7 @@ export const SERVICE_CATEGORIES = [
     id: "baby-shower",
     label: "Baby Shower",
     description: "Adorable pastel themes with custom props & balloon garlands",
-    icon: "Baby",
+    icon: "Baby" as IconName,
     startingPrice: 4999,
     image: "/images/baby-shower.jpg",
     features: ["Pastel Balloon Garland", "Baby Props", "Welcome Board", "Dessert Table Setup", "Photo Booth", "Theme Decor"],
@@ -70,7 +83,7 @@ export const SERVICE_CATEGORIES = [
     id: "engagement",
     label: "Engagement Decoration",
     description: "Elegant ring ceremony setups with premium floral arrangements",
-    icon: "Gem",
+    icon: "Gem" as IconName,
     startingPrice: 7999,
     image: "/images/engagement.jpg",
     features: ["Ring Ceremony Stage", "Floral Arch", "LED Backdrop", "Entry Path Decor", "Couple Name Board", "Lighting Setup"],
@@ -80,7 +93,7 @@ export const SERVICE_CATEGORIES = [
     id: "haldi",
     label: "Haldi Ceremony",
     description: "Vibrant marigold decor with traditional Indian elements",
-    icon: "Flower2",
+    icon: "Flower2" as IconName,
     startingPrice: 4999,
     image: "/images/haldi.jpg",
     features: ["Marigold Canopy", "Haldi Thali Setup", "Rangoli Design", "Flower Curtain", "Traditional Props", "Yellow Theme Decor"],
@@ -90,7 +103,7 @@ export const SERVICE_CATEGORIES = [
     id: "mehendi",
     label: "Mehendi Setup",
     description: "Colorful bohemian setups with cushions & hanging elements",
-    icon: "Palette",
+    icon: "Palette" as IconName,
     startingPrice: 5999,
     image: "/images/mehendi.jpg",
     features: ["Bohemian Canopy", "Cushion Seating", "Hanging Lanterns", "Floral Chandelier", "Colorful Drapes", "Mehendi Stage"],
@@ -100,7 +113,7 @@ export const SERVICE_CATEGORIES = [
     id: "corporate",
     label: "Corporate Events",
     description: "Professional event branding, stage decor & welcome setups",
-    icon: "Building2",
+    icon: "Building2" as IconName,
     startingPrice: 9999,
     image: "/images/corporate.jpg",
     features: ["Stage Branding", "Welcome Desk", "Photo Booth", "LED Wall Setup", "Table Centerpieces", "Corporate Colors"],
@@ -110,7 +123,7 @@ export const SERVICE_CATEGORIES = [
     id: "custom",
     label: "Custom Decoration",
     description: "Tell us your vision — we'll bring it to life",
-    icon: "Sparkles",
+    icon: "Sparkles" as IconName,
     startingPrice: 1999,
     image: "/images/custom.jpg",
     features: ["Custom Theme", "Personalized Design", "Flexible Budget", "Unique Props", "Full Customization", "Creative Consultation"],
@@ -127,32 +140,32 @@ export const STATS = [
 
 export const FEATURES = [
   {
-    icon: "Palette",
+    icon: "Palette" as IconName,
     title: "Custom Themes",
     description: "Every decoration tailored uniquely to your vision, theme, and budget",
   },
   {
-    icon: "Clock",
+    icon: "Clock" as IconName,
     title: "On-Time Setup",
     description: "We arrive early and set up perfectly — punctuality is our promise",
   },
   {
-    icon: "BadgeIndianRupee",
+    icon: "BadgeIndianRupee" as IconName,
     title: "Best Prices",
     description: "Premium quality decorations at the most competitive prices in Delhi NCR",
   },
   {
-    icon: "Camera",
+    icon: "Camera" as IconName,
     title: "Insta-Worthy",
     description: "Setups designed to look stunning in photos, reels & live streams",
   },
   {
-    icon: "Sparkles",
+    icon: "Sparkles" as IconName,
     title: "Cleanup Included",
     description: "Full service from setup to teardown — you enjoy, we handle the rest",
   },
   {
-    icon: "MessageCircle",
+    icon: "MessageCircle" as IconName,
     title: "24/7 WhatsApp Support",
     description: "Instant responses for queries, changes & last-minute requests",
   },
