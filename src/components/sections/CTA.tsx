@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { SITE_CONFIG } from '@/lib/constants'
-import { TextReveal } from '@/components/ui/TextReveal'
 import { MagneticButton } from '@/components/ui/MagneticButton'
 import { ScrollReveal } from '@/components/ui/ScrollReveal'
 import { ArrowRight, Phone, Shield } from 'lucide-react'
@@ -32,14 +31,24 @@ export default function CTA() {
         </div>
 
         <h2 className="font-bold mb-4 sm:mb-5 leading-[1.1]" style={{ fontSize: 'var(--text-3xl)' }}>
-          <span className="block">
-            <TextReveal>Ready to Make Your</TextReveal>
-          </span>
-          <span className="block mt-1 sm:mt-2">
-            <TextReveal className="text-gold-gradient" delay={0.2}>
-              Event Unforgettable?
-            </TextReveal>
-          </span>
+          <motion.span
+            className="block"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Ready to Make Your
+          </motion.span>
+          <motion.span
+            className="block mt-1 sm:mt-2 text-gold-gradient"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            Event Unforgettable?
+          </motion.span>
         </h2>
 
         <p className="text-[#d4d4d4] mb-8 sm:mb-10 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">

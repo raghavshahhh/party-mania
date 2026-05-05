@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { TextReveal } from '@/components/ui/TextReveal'
 import { MagneticButton } from '@/components/ui/MagneticButton'
 import { Counter } from '@/components/ui/Counter'
 import { STATS, SITE_CONFIG, SERVICE_CATEGORIES } from '@/lib/constants'
@@ -64,22 +63,24 @@ export default function Hero() {
 
             {/* Main Heading */}
             <h1 className="font-bold mb-4 sm:mb-6 leading-[1.1] tracking-tight" style={{ fontSize: 'var(--text-5xl)' }}>
-              <span className="block">
-                <TextReveal className="text-white" delay={0.3}>
-                  We
-                </TextReveal>{' '}
-                <TextReveal className="text-gold-gradient" delay={0.4}>
-                  Decorate,
-                </TextReveal>
-              </span>
-              <span className="block mt-1 sm:mt-2">
-                <TextReveal className="text-white" delay={0.55}>
-                  You
-                </TextReveal>{' '}
-                <TextReveal className="text-gold-gradient" delay={0.65}>
-                  Celebrate!
-                </TextReveal>
-              </span>
+              <motion.span
+                className="block"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <span className="text-white">We </span>
+                <span className="text-gold-gradient">Decorate,</span>
+              </motion.span>
+              <motion.span
+                className="block mt-1 sm:mt-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <span className="text-white">You </span>
+                <span className="text-gold-gradient">Celebrate!</span>
+              </motion.span>
             </h1>
 
             {/* Subtitle */}
