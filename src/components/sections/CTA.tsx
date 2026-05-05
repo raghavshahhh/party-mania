@@ -32,11 +32,14 @@ export default function CTA() {
         </div>
 
         <h2 className="font-bold mb-4 sm:mb-5 leading-[1.1]" style={{ fontSize: 'var(--text-3xl)' }}>
-          <TextReveal>Ready to Make Your</TextReveal>
-          <br />
-          <TextReveal className="text-gold-gradient" delay={0.2}>
-            Event Unforgettable?
-          </TextReveal>
+          <span className="block">
+            <TextReveal>Ready to Make Your</TextReveal>
+          </span>
+          <span className="block mt-1 sm:mt-2">
+            <TextReveal className="text-gold-gradient" delay={0.2}>
+              Event Unforgettable?
+            </TextReveal>
+          </span>
         </h2>
 
         <p className="text-[#b3b3b3] mb-8 sm:mb-10 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">

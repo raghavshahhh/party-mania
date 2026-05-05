@@ -63,20 +63,23 @@ export default function Hero() {
             </motion.div>
 
             {/* Main Heading */}
-            <h1 className="font-bold mb-4 sm:mb-6 leading-[1.05] tracking-tight" style={{ fontSize: 'var(--text-5xl)' }}>
-              <TextReveal className="text-white" delay={0.3}>
-                We
-              </TextReveal>{' '}
-              <TextReveal className="text-gold-gradient" delay={0.4}>
-                Decorate,
-              </TextReveal>
-              <br className="hidden sm:block" />
-              <TextReveal className="text-white" delay={0.55}>
-                You
-              </TextReveal>{' '}
-              <TextReveal className="text-gold-gradient" delay={0.65}>
-                Celebrate!
-              </TextReveal>
+            <h1 className="font-bold mb-4 sm:mb-6 leading-[1.1] tracking-tight" style={{ fontSize: 'var(--text-5xl)' }}>
+              <span className="block">
+                <TextReveal className="text-white" delay={0.3}>
+                  We
+                </TextReveal>{' '}
+                <TextReveal className="text-gold-gradient" delay={0.4}>
+                  Decorate,
+                </TextReveal>
+              </span>
+              <span className="block mt-1 sm:mt-2">
+                <TextReveal className="text-white" delay={0.55}>
+                  You
+                </TextReveal>{' '}
+                <TextReveal className="text-gold-gradient" delay={0.65}>
+                  Celebrate!
+                </TextReveal>
+              </span>
             </h1>
 
             {/* Subtitle */}
@@ -123,16 +126,21 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={1.3}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 sm:gap-0 sm:divide-x sm:divide-[#D4AF37]/15 max-w-3xl"
+              className="flex flex-wrap items-center justify-start gap-x-6 gap-y-3 sm:gap-x-0 sm:gap-y-0 max-w-3xl"
             >
-              {STATS.map((stat) => (
-                <div key={stat.label} className="text-center px-3 sm:px-4 py-2 sm:py-0">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-[#D4AF37]">
-                    <Counter target={stat.value} suffix={stat.suffix} isDecimal={'isDecimal' in stat} />
+              {STATS.map((stat, i) => (
+                <div key={stat.label} className="flex items-center gap-4 sm:gap-6">
+                  <div className="text-center sm:text-left">
+                    <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#D4AF37] tabular-nums">
+                      <Counter target={stat.value} suffix={stat.suffix} isDecimal={'isDecimal' in stat} />
+                    </div>
+                    <div className="text-[9px] sm:text-[10px] md:text-xs text-[#737373] mt-0.5 tracking-wider uppercase">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-[#737373] mt-1 sm:mt-2 tracking-wide uppercase">
-                    {stat.label}
-                  </div>
+                  {i < STATS.length - 1 && (
+                    <div className="hidden sm:block w-px h-8 bg-[#D4AF37]/15" />
+                  )}
                 </div>
               ))}
             </motion.div>

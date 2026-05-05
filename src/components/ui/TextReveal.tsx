@@ -20,13 +20,13 @@ export function TextReveal({ children, className = '', delay = 0, as = 'span' }:
   return (
     <Component ref={ref} className={`${className} inline`}>
       {words.map((word, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em] last:mr-0">
+        <span key={i} className="inline-block overflow-visible mr-[0.25em] last:mr-0 relative" style={{ paddingBottom: '0.1em' }}>
           <motion.span
             className="inline-block"
-            initial={{ y: '110%', rotateX: -80 }}
-            animate={isInView ? { y: 0, rotateX: 0 } : {}}
+            initial={{ opacity: 0, y: '100%' }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{
-              duration: 0.9,
+              duration: 0.8,
               delay: delay + i * 0.06,
               ease: [0.16, 1, 0.3, 1],
             }}
