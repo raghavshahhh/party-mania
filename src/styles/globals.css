@@ -48,6 +48,18 @@
     font-family: "Inter", system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  /* Safari smooth scroll fix */
+  @supports (-webkit-touch-callout: none) {
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   ::selection {

@@ -15,7 +15,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Lock body scroll when mobile menu open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'
@@ -26,132 +25,149 @@ export default function Navbar() {
   }, [isOpen])
 
   return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-black/90 backdrop-blur-xl border-b border-[#D4AF37]/15'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-lg sm:text-xl font-bold text-gold-gradient tracking-tight">
-              {SITE_CONFIG.name}
-            </span>
-          </Link>
-
-          {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-10">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="relative text-sm text-[#b3b3b3] hover:text-white transition-colors duration-300 group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a
-              href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-5 py-2.5 text-sm font-medium text-[#D4AF37] border border-[#D4AF37]/30 rounded-full hover:bg-[#D4AF37]/10 transition-all duration-300"
-            >
-              WhatsApp
-            </a>
-            <Link
-              href="/booking"
-              className="px-5 py-2.5 text-sm font-semibold text-black bg-gradient-to-r from-[#B8960C] to-[#D4AF37] rounded-full hover:shadow-lg hover:shadow-[#D4AF37]/25 transition-all duration-300"
-            >
-              Book Now
+    <>
+      <motion.nav
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className={`fixed top-3 sm:top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[calc(100%-24px)] sm:w-[calc(100%-48px)] lg:w-auto lg:max-w-5xl ${
+          scrolled
+            ? 'bg-black/70 backdrop-blur-2xl border border-[#D4AF37]/15 rounded-2xl sm:rounded-full shadow-lg shadow-black/30'
+            : 'bg-transparent'
+        }`}
+        style={{
+          ...(scrolled ? { WebkitBackdropFilter: 'blur(24px)', backdropFilter: 'blur(24px)' } : {}),
+        }}
+      >
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-14 sm:h-16 lg:h-18">
+            <Link href="/" className="flex items-center gap-2 group">
+              <span className="text-lg sm:text-xl font-bold text-gold-gradient tracking-tight">
+                {SITE_CONFIG.name}
+              </span>
             </Link>
+
+            {/* Desktop nav */}
+            <div className="hidden lg:flex items-center gap-8">
+              {NAV_LINKS.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="relative text-sm text-[#b3b3b3] hover:text-white transition-colors duration-300 group"
+                >
+                  {link.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#D4AF37] transition-all duration-300 group-hover:w-full" />
+                </Link>
+              ))}
+            </div>
+
+            {/* Desktop CTAs */}
+            <div className="hidden lg:flex items-center gap-3">
+              <a
+                href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm font-medium text-[#D4AF37] border border-[#D4AF37]/30 rounded-full hover:bg-[#D4AF37]/10 transition-all duration-300"
+              >
+                WhatsApp
+              </a>
+              <Link
+                href="/booking"
+                className="px-4 py-2 text-sm font-semibold text-black bg-gradient-to-r from-[#B8960C] to-[#D4AF37] rounded-full hover:shadow-lg hover:shadow-[#D4AF37]/25 transition-all duration-300"
+              >
+                Book Now
+              </Link>
+            </div>
+
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+              aria-label="Toggle menu"
+            >
+              <motion.span
+                animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 }}
+                className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
+              />
+              <motion.span
+                animate={{ opacity: isOpen ? 0 : 1 }}
+                className="block w-6 h-0.5 bg-[#D4AF37]"
+              />
+              <motion.span
+                animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -6 : 0 }}
+                className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
+              />
+            </button>
           </div>
-
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 -mr-2"
-            aria-label="Toggle menu"
-          >
-            <motion.span
-              animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 }}
-              className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
-            />
-            <motion.span
-              animate={{ opacity: isOpen ? 0 : 1 }}
-              className="block w-6 h-0.5 bg-[#D4AF37]"
-            />
-            <motion.span
-              animate={{ rotate: isOpen ? -45 : 0, y: isOpen ? -6 : 0 }}
-              className="block w-6 h-0.5 bg-[#D4AF37] origin-center"
-            />
-          </button>
         </div>
-      </div>
+      </motion.nav>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl border-t border-[#D4AF37]/15 fixed inset-x-0 top-14 sm:top-16 bottom-0 z-40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+            style={{ top: 0 }}
+            onClick={() => setIsOpen(false)}
           >
-            <div className="px-6 py-8 space-y-1 h-full overflow-y-auto">
-              {NAV_LINKS.map((link, i) => (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="mx-3 sm:mx-4 mt-[72px] sm:mt-20 bg-[#0d0d0d]/95 backdrop-blur-2xl rounded-2xl border border-[#D4AF37]/15 overflow-hidden"
+              style={{ WebkitBackdropFilter: 'blur(24px)', backdropFilter: 'blur(24px)' }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="px-6 py-6 space-y-1">
+                {NAV_LINKS.map((link, i) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block py-3.5 text-base text-[#b3b3b3] hover:text-[#D4AF37] transition-colors active:scale-[0.98]"
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
                 <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="pt-4 space-y-3"
                 >
                   <Link
-                    href={link.href}
+                    href="/booking"
                     onClick={() => setIsOpen(false)}
-                    className="block py-4 text-lg text-[#b3b3b3] hover:text-[#D4AF37] transition-colors active:scale-[0.98]"
+                    className="block text-center px-6 py-3.5 bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-semibold rounded-full active:scale-[0.98]"
                   >
-                    {link.label}
+                    Book Now
                   </Link>
+                  <a
+                    href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="block text-center px-6 py-3.5 border border-emerald-500/30 text-emerald-400 font-medium rounded-full"
+                  >
+                    WhatsApp Us
+                  </a>
                 </motion.div>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="pt-4 space-y-3"
-              >
-                <Link
-                  href="/booking"
-                  onClick={() => setIsOpen(false)}
-                  className="block text-center px-6 py-3.5 bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-semibold rounded-full active:scale-[0.98]"
-                >
-                  Book Now
-                </Link>
-                <a
-                  href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsOpen(false)}
-                  className="block text-center px-6 py-3.5 border border-emerald-500/30 text-emerald-400 font-medium rounded-full"
-                >
-                  💬 WhatsApp Us
-                </a>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </>
   )
 }
