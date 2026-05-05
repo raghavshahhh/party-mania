@@ -42,7 +42,7 @@ export default function CTA() {
           </span>
         </h2>
 
-        <p className="text-[#b3b3b3] mb-8 sm:mb-10 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">
+        <p className="text-[#d4d4d4] mb-8 sm:mb-10 max-w-lg mx-auto leading-relaxed text-sm sm:text-base">
           Book your decoration now and let us transform your venue into
           something magical. Simple booking, transparent pricing, stunning results.
         </p>

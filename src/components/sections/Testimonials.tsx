@@ -24,7 +24,7 @@ function TestimonialCard({ testimonial }: { testimonial: typeof TESTIMONIALS[num
       </div>
 
       {/* Review text */}
-      <p className="text-[#b3b3b3] leading-relaxed mb-4 sm:mb-6 text-xs sm:text-sm line-clamp-4">
+      <p className="text-[#d4d4d4] leading-relaxed mb-4 sm:mb-6 text-xs sm:text-sm line-clamp-4">
         &ldquo;{testimonial.text}&rdquo;
       </p>
 

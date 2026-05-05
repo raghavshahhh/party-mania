@@ -88,7 +88,7 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
               custom={0.9}
-              className="text-[#b3b3b3] max-w-xl mb-8 sm:mb-10 leading-relaxed"
+              className="text-[#d4d4d4] max-w-xl mb-8 sm:mb-10 leading-relaxed"
               style={{ fontSize: 'var(--text-lg)' }}
             >
               Premium balloon decorations, themed setups & custom event styling for birthdays, anniversaries, baby showers & more across {SITE_CONFIG.city}
@@ -103,7 +103,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 sm:gap-4 mb-10 sm:mb-12"
             >
               <Link href="/booking" className="block">
-                <MagneticButton className="group w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#D4AF37]/30 transition-all duration-500">
+                <MagneticButton className="group w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-bold rounded-full hover:shadow-2xl hover:shadow-[#D4AF37]/40 transition-all duration-500 shadow-lg shadow-[#D4AF37]/20">
                   Book Your Event
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </MagneticButton>
@@ -114,7 +114,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="block"
               >
-                <MagneticButton className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base border border-emerald-500/30 text-emerald-400 font-medium rounded-full hover:bg-emerald-500/10 hover:border-emerald-500/50 transition-all duration-500">
+                <MagneticButton className="w-full sm:w-auto px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base border border-emerald-500/40 text-emerald-400 font-medium rounded-full hover:bg-emerald-500/10 hover:border-emerald-500/50 transition-all duration-500">
                   💬 WhatsApp Us
                 </MagneticButton>
               </a>
@@ -134,7 +134,7 @@ export default function Hero() {
                     <div className="text-lg sm:text-xl md:text-2xl font-bold text-[#D4AF37] tabular-nums">
                       <Counter target={stat.value} suffix={stat.suffix} isDecimal={'isDecimal' in stat} />
                     </div>
-                    <div className="text-[9px] sm:text-[10px] md:text-xs text-[#737373] mt-0.5 tracking-wider uppercase">
+                    <div className="text-[9px] sm:text-[10px] md:text-xs text-[#999999] mt-0.5 tracking-wider uppercase">
                       {stat.label}
                     </div>
                   </div>

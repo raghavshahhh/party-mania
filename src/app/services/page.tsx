@@ -46,7 +46,7 @@ function PricingCard({ pkg, category, isPopular }: { pkg: PricingPackage; catego
         {pkg.features.map((feature: string, i: number) => (
           <div key={i} className="flex items-start gap-2 sm:gap-3">
             <Check className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
-            <span className="text-xs sm:text-sm text-[#b3b3b3]">{feature}</span>
+            <span className="text-xs sm:text-sm text-[#d4d4d4]">{feature}</span>
           </div>
         ))}
       </div>
@@ -153,7 +153,7 @@ function ServicesContent() {
                   {activeService.features.map((f: string, i: number) => (
                     <div key={i} className="flex items-center gap-2">
                       <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" />
-                      <span className="text-xs sm:text-sm text-[#b3b3b3]">{f}</span>
+                      <span className="text-xs sm:text-sm text-[#d4d4d4]">{f}</span>
                     </div>
                   ))}
                 </div>

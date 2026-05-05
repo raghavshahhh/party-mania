@@ -47,7 +47,7 @@ export default function FAQ() {
                       className="overflow-hidden"
                     >
                       <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-0">
-                        <p className="text-xs sm:text-sm text-[#b3b3b3] leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#d4d4d4] leading-relaxed">
                           {item.answer}
                         </p>
                       </div>
