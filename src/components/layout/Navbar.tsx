@@ -15,6 +15,16 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Lock body scroll when mobile menu open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => { document.body.style.overflow = '' }
+  }, [isOpen])
+
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
@@ -27,9 +37,9 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-xl font-bold text-gold-gradient tracking-tight">
+            <span className="text-lg sm:text-xl font-bold text-gold-gradient tracking-tight">
               {SITE_CONFIG.name}
             </span>
           </Link>
@@ -55,14 +65,12 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 text-sm font-medium text-[#D4AF37] border border-[#D4AF37]/30 rounded-full hover:bg-[#D4AF37]/10 transition-all duration-300"
-              data-hover
             >
               WhatsApp
             </a>
             <Link
               href="/booking"
               className="px-5 py-2.5 text-sm font-semibold text-black bg-gradient-to-r from-[#B8960C] to-[#D4AF37] rounded-full hover:shadow-lg hover:shadow-[#D4AF37]/25 transition-all duration-300"
-              data-hover
             >
               Book Now
             </Link>
@@ -71,9 +79,8 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-1.5"
+            className="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 -mr-2"
             aria-label="Toggle menu"
-            data-hover
           >
             <motion.span
               animate={{ rotate: isOpen ? 45 : 0, y: isOpen ? 6 : 0 }}
@@ -99,9 +106,9 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl border-t border-[#D4AF37]/15"
+            className="lg:hidden overflow-hidden bg-[#0a0a0a]/98 backdrop-blur-xl border-t border-[#D4AF37]/15 fixed inset-x-0 top-14 sm:top-16 bottom-0 z-40"
           >
-            <div className="px-6 py-8 space-y-1">
+            <div className="px-6 py-8 space-y-1 h-full overflow-y-auto">
               {NAV_LINKS.map((link, i) => (
                 <motion.div
                   key={link.href}
@@ -112,7 +119,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block py-3 text-lg text-[#b3b3b3] hover:text-[#D4AF37] transition-colors"
+                    className="block py-4 text-lg text-[#b3b3b3] hover:text-[#D4AF37] transition-colors active:scale-[0.98]"
                   >
                     {link.label}
                   </Link>
@@ -122,15 +129,24 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="pt-4"
+                className="pt-4 space-y-3"
               >
                 <Link
                   href="/booking"
                   onClick={() => setIsOpen(false)}
-                  className="block text-center px-6 py-3 bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-semibold rounded-full"
+                  className="block text-center px-6 py-3.5 bg-gradient-to-r from-[#B8960C] to-[#D4AF37] text-black font-semibold rounded-full active:scale-[0.98]"
                 >
                   Book Now
                 </Link>
+                <a
+                  href={`https://wa.me/${SITE_CONFIG.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsOpen(false)}
+                  className="block text-center px-6 py-3.5 border border-emerald-500/30 text-emerald-400 font-medium rounded-full"
+                >
+                  💬 WhatsApp Us
+                </a>
               </motion.div>
             </div>
           </motion.div>

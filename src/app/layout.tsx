@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { ClientEffects } from '@/components/ui/ClientEffects'
+import { SmoothScroll } from '@/components/ui/SmoothScroll'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -69,9 +70,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen bg-black text-white font-sans antialiased overflow-x-hidden">
         <ClientEffects />
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   )

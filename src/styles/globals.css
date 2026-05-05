@@ -25,6 +25,13 @@
     --text-3xl: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
     --text-4xl: clamp(2.5rem, 2rem + 3vw, 5rem);
     --text-5xl: clamp(3rem, 2rem + 5vw, 7rem);
+
+    /* Motion blur tokens */
+    --blur-sm: 4px;
+    --blur-md: 8px;
+    --blur-lg: 16px;
+    --duration-blur: 0.6s;
+    --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   * {
@@ -66,8 +73,8 @@
 
   .glass-gold {
     background: rgba(212, 175, 55, 0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(212, 175, 55, 0.15);
   }
 
@@ -116,6 +123,39 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Premium motion blur reveal — elements blur in on scroll */
+  .blur-reveal {
+    filter: blur(var(--blur-md));
+    opacity: 0.3;
+    transform: translateY(20px) scale(0.98);
+    transition:
+      filter var(--duration-blur) var(--ease-premium),
+      opacity 0.8s var(--ease-premium),
+      transform 0.8s var(--ease-premium);
+  }
+  .blur-reveal.is-visible {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Motion blur on fast hover */
+  .motion-blur-hover {
+    transition: filter 0.3s var(--ease-premium), transform 0.3s var(--ease-premium);
+    will-change: filter, transform;
+  }
+  .motion-blur-hover:hover {
+    filter: blur(0.5px);
+    transform: translateY(-2px);
+  }
 }
 
 @layer utilities {
@@ -129,6 +169,10 @@
 
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-blur-pulse {
+    animation: blur-pulse 4s ease-in-out infinite;
   }
 }
 
@@ -147,6 +191,17 @@
   50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.4); }
 }
 
+@keyframes blur-pulse {
+  0%, 100% { filter: blur(0px); opacity: 1; }
+  50% { filter: blur(2px); opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -157,14 +212,35 @@
   background: #B8960C;
   border-radius: 3px;
 }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #D4AF37;
 }
 
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile touch improvements */
+@media (max-width: 640px) {
+  /* Prevent horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Better tap targets */
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Disable hover transforms on mobile (causes jank) */
+  .card-hover:hover {
+    transform: none;
   }
 }
